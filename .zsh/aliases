@@ -1,2 +1,7 @@
 alias ls="ls --color=auto"
 alias ll="ls -alh"
+alias ip="ip -c"
+alias grep="grep --color=auto"
+alias apt4="apt -o Acquire::ForceIPv4=true"
+alias apt6="apt -o Acquire::ForceIPv6=true"
+
