@@ -1,0 +1,12 @@
+[user]
+    name = Michaël Paulon
+    email = michael@paulon.org
+[core]
+    excludedfiles = ~/.config/gitignore
+[color]
+    ui = auto
+[alias]
+    ignore = update-index --assume-unchanged
+    unignore = update-index --no-assume-unchanged
+    ignored = !git ls-files -v | grep "^[[:lower:]]"
+
