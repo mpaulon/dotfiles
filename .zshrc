@@ -3,11 +3,12 @@ typeset -U PATH
 export PATH=$PATH:$HOME/bin
 
 # aliases
-source .zsh/aliases
+source $HOME/.config/zsh/aliases
+mkdir -p $HOME/.cache/zsh
 
 # completion
 autoload -Uz compinit
-compinit
+compinit -d $HOME/.cache/zsh/zcompdump
 zstyle ':completion:*' menu select # active le menu de tab completion
 setopt COMPLETE_ALIASES # complete les alias
 zstyle ':completion::complete:*' gain-privileges 1 # active la completion pour sudo
@@ -20,7 +21,7 @@ zle -N down-line-or-beginning-search
 [[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
 [[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
 export HISTSIZE=100000
-export HISTFILE="$HOME/.zsh/history"
+export HISTFILE="$HOME/.cache/zsh/history"
 export SAVEHIST=$HISTSIZE
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
