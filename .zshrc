@@ -2,6 +2,10 @@
 typeset -U PATH
 export PATH=$PATH:$HOME/bin
 
+# env
+export BROWSER=firefox
+export EDITOR=vim
+
 # aliases
 source $HOME/.config/zsh/aliases
 mkdir -p $HOME/.cache/zsh
