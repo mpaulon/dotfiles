@@ -31,8 +31,9 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 
 # keybindings
-key[Control-Left]="${terminfo[kLFT5]}"
-key[Control-Right]="${terminfo[kRIT5]}"
+source $HOME/.config/zsh/keys
+[[ -n "${key[Home]}"      ]] && bindkey -- "${key[Home]}"              beginning-of-line
+[[ -n "${key[End]}"       ]] && bindkey -- "${key[End]}"               end-of-line
 [[ -n "${key[Control-Left]}"  ]] && bindkey -- "${key[Control-Left]}"  backward-word
 [[ -n "${key[Control-Right]}" ]] && bindkey -- "${key[Control-Right]}" forward-word
 exit_zsh() { exit }
