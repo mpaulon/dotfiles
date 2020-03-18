@@ -32,4 +32,4 @@ FontName=Monospace 8
 ShortcutsNoMnemonics=TRUE
 ShortcutsNoHelpkey=TRUE
 ScrollingOnOutput=FALSE
-
+ScrollingUnlimited=TRUE
