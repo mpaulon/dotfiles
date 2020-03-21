@@ -17,6 +17,7 @@ zstyle ':completion:*' menu select # active le menu de tab completion
 setopt COMPLETE_ALIASES # complete les alias
 zstyle ':completion::complete:*' gain-privileges 1 # active la completion pour sudo
 zstyle ':completion:*' rehash true # rehashe automatiquement la completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # Case-insensitive (uppercase from lowercase) completion
 
 # history
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
