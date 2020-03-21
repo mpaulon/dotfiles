@@ -8,6 +8,7 @@ export EDITOR=vim
 
 # aliases
 source $HOME/.config/zsh/aliases
+source $HOME/.config/zsh/keys
 mkdir -p $HOME/.cache/zsh
 
 # completion
@@ -32,7 +33,6 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 
 # keybindings
-source $HOME/.config/zsh/keys
 [[ -n "${key[Home]}"      ]] && bindkey -- "${key[Home]}"              beginning-of-line
 [[ -n "${key[End]}"       ]] && bindkey -- "${key[End]}"               end-of-line
 [[ -n "${key[Control-Left]}"  ]] && bindkey -- "${key[Control-Left]}"  backward-word
