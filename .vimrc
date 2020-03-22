@@ -18,6 +18,9 @@ let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
+let g:netrw_home="~/.cache/vim"
+set viminfo+='1000,n~/.cache/vim/viminfo
+
 " Installation de vim-plug
 if empty(glob('~/.config/vim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/vim/autoload/plug.vim --create-dirs
