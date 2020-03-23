@@ -52,7 +52,9 @@ zstyle ':vcs_info:git:*' formats '%b'
 autoload -Uz promptinit
 promptinit
 
-PROMPT='%B%(?.%F{green}√.%F{red}%?)%f%b %F{cyan}%m%f %B(%2~)%b %# '
+HCOLOR="#$(echo -n $HOST| md5sum | cut -c1-6)"
+
+PROMPT='%B%(?.%F{green}√.%F{red}%?)%f%b %F{$HCOLOR}%m%f %B(%2~)%b %# '
 RPROMPT='$vcs_info_msg_0_'
 
 # custom commands
