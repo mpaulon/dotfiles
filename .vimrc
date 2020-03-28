@@ -1,6 +1,10 @@
 set runtimepath+=~/.config/vim,~/.config/vim/after
 syntax on
 filetype plugin indent on
+
+set path+=**
+set wildmenu
+
 set modelines=0
 set ruler
 set wrap
