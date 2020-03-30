@@ -1,6 +1,5 @@
 # path
 typeset -U PATH
-export PATH=$PATH:$HOME/bin
 
 # env
 export BROWSER=firefox
