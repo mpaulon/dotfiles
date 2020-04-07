@@ -14,7 +14,6 @@ mkdir -p $HOME/.cache/zsh
 autoload -Uz compinit
 compinit -d $HOME/.cache/zsh/zcompdump
 zstyle ':completion:*' menu select # active le menu de tab completion
-setopt COMPLETE_ALIASES # complete les alias
 zstyle ':completion::complete:*' gain-privileges 1 # active la completion pour sudo
 zstyle ':completion:*' rehash true # rehashe automatiquement la completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # Case-insensitive (uppercase from lowercase) completion
@@ -57,5 +56,7 @@ PROMPT='%B%(?.%F{green}√.%F{red}%?)%f%b %F{$HCOLOR}%m%f %B(%2~)%b %# '
 RPROMPT='$vcs_info_msg_0_'
 
 # custom commands
-up() { source $HOME/.zshrc }
+up() { 
+  exec zsh
+}
 
