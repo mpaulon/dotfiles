@@ -40,5 +40,6 @@ call plug#begin('~/.config/vim/plugged')
 Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'arnar/vim-matchopen'
 call plug#end()
 
