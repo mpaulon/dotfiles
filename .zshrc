@@ -60,3 +60,28 @@ up() {
   exec zsh
 }
 
+preexec() {
+  if [[ $2 == python* ]] && type nvidia-smi > /dev/null; then
+
+    CUDA_VISIBLE_DEVICES=""
+    smi=$(nvidia-smi --query-gpu=index,memory.used --format=cs  v)
+    IFS=$'\n'
+    for line in ${=smi}
+    do
+      GPU=$(echo $line |cut -d',' -f 1)
+      memory=$(echo $line |cut -d',' -f 2)
+      if ! [ "$GPU" = "index" ]; then
+        if [ "$memory" = " 0 MiB" ]; then
+          echo "Running using GPU $GPU"
+          export CUDA_VISIBLE_DEVICES="$GPU"
+          break
+        fi
+      fi
+    done
+    if [ "$CUDA_VISIBLE_DEVICES" = "" ]; then
+      echo "Running using CPU"
+      export CUDA_VISIBLE_DEVICES=""
+    fi
+  fi
+}
+
