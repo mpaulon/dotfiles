@@ -1,3 +1,4 @@
 .zsh/history
 .ssh/*
 !.ssh/config
+!.ssh/authorized_keys
