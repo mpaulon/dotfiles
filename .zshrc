@@ -5,9 +5,6 @@ typeset -U PATH
 export BROWSER=firefox
 export EDITOR=vim
 
-# aliases
-source $HOME/.config/zsh/aliases
-source $HOME/.config/zsh/keys
 mkdir -p $HOME/.cache/zsh
 
 # completion
@@ -17,6 +14,11 @@ zstyle ':completion:*' menu select # active le menu de tab completion
 zstyle ':completion::complete:*' gain-privileges 1 # active la completion pour sudo
 zstyle ':completion:*' rehash true # rehashe automatiquement la completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # Case-insensitive (uppercase from lowercase) completion
+
+# aliases
+source $HOME/.config/zsh/aliases
+source $HOME/.config/zsh/functions
+source $HOME/.config/zsh/keys
 
 # history
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
@@ -85,3 +87,4 @@ preexec() {
   fi
 }
 
+# vim: set filetype=zsh :

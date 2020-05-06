@@ -7,3 +7,5 @@ alias apt6="apt -o Acquire::ForceIPv6=true"
 alias gsudo='sudo git -c "include.path=/home/mikachu/.config/git/config" -c "include.path=/home/mikachu/.gitconfig"'
 alias g="git"
 alias env="source env/bin/activate"
+
+# vim: set filetype=zsh :
