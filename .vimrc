@@ -5,7 +5,8 @@ filetype plugin indent on
 set path+=**
 set wildmenu
 
-set modelines=0
+set modeline
+set modelines=5
 set ruler
 set wrap
 set tabstop=2
@@ -24,6 +25,7 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 let g:netrw_home="~/.cache/vim"
 set viminfo+='1000,n~/.cache/vim/viminfo
+
 
 " Installation de vim-plug
 if empty(glob('~/.config/vim/autoload/plug.vim'))
