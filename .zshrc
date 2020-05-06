@@ -63,10 +63,9 @@ up() {
 }
 
 preexec() {
-  if [[ $2 == python* ]] && type nvidia-smi > /dev/null; then
-
+  if [[ "$HOST" =~ ^(lemp3|lemp4|lemp5)$ ]] && [[ $2 == python* ]] && type nvidia-smi > /dev/null; then
     CUDA_VISIBLE_DEVICES=""
-    smi=$(nvidia-smi --query-gpu=index,memory.used --format=cs  v)
+    smi=$(nvidia-smi --query-gpu=index,memory.used --format=csv)
     IFS=$'\n'
     for line in ${=smi}
     do
