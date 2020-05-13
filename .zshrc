@@ -2,7 +2,7 @@
 typeset -U PATH
 
 # env
-export BROWSER=firefox
+export BROWSER=qutebrowser
 export EDITOR=vim
 
 mkdir -p $HOME/.cache/zsh
