@@ -62,6 +62,11 @@ up() {
   exec zsh
 }
 
+precmd() {
+  # set terminal title to host:pwd
+  print -Pn "\e]0;%~\a"
+}
+
 preexec() {
   if [[ "$HOST" =~ ^(lemp3|lemp4|lemp5)$ ]] && [[ $2 == python* ]] && type nvidia-smi > /dev/null; then
     CUDA_VISIBLE_DEVICES=""
@@ -85,5 +90,8 @@ preexec() {
     fi
   fi
 }
+
+# désactive Ctrl+S
+stty -ixon
 
 # vim: set filetype=zsh :
