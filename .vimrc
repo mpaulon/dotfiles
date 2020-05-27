@@ -35,11 +35,43 @@ if empty(glob('~/.config/vim/autoload/plug.vim'))
 endif
 
 
+nnoremap <C-n> :NERDTree %<CR>
+" Permet de fermer vim si il ne reste que NERDTree d'ouvert
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeShowHidden=1
+let g:NERDTreeShowIgnoredStatus = 1
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "m",
+    \ "Staged"    : "s",
+    \ "Untracked" : "u",
+    \ "Renamed"   : "r",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "D",
+    \ "Dirty"     : "X",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : 'i',
+    \ "Unknown"   : "?"
+    \ }
 
 
+" On remappe les tabs
+nnoremap <C-t> :tabnew<CR>
+nnoremap <C-w> :tabclose<CR>
+nnoremap <M-Left> :tabprevious<CR>
+nnoremap <M-Right> :tabnext<CR>
+
+" Et les splits
+nnoremap <C-s>n :sp<CR>
+nnoremap <C-s><S-n> :vsp<CR>
+nnoremap <C-s><Up> :<wincmd k<CR>
+nnoremap <C-s><Down> :wincmd j<CR>
+nnoremap <C-s><Left> :wincmd h<CR>
+nnoremap <C-s><Right> : wincmd l<CR>
 " Plugins
 call plug#begin('~/.config/vim/plugged')
 Plug 'dense-analysis/ale'
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 call plug#end()
