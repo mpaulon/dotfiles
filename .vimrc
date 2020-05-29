@@ -67,6 +67,27 @@ nnoremap <C-s><Up> :<wincmd k<CR>
 nnoremap <C-s><Down> :wincmd j<CR>
 nnoremap <C-s><Left> :wincmd h<CR>
 nnoremap <C-s><Right> : wincmd l<CR>
+
+" Configuration pour ALE
+let b:ale_fixers = {
+\   '*': [
+\       'trim_whitespace', 
+\       'remove_trailing_lines', 
+\   ],
+\   'python': [
+\       'trim_whitespace', 
+\       'remove_trailing_lines', 
+\       'reorder-python-imports'
+\   ],
+\}
+let b:ale_linters = {
+\   'python': [
+\       'flake8', 
+\       'mypy'
+\   ]
+\}
+nnoremap <C-f> :ALEFix<CR>
+
 " Plugins
 call plug#begin('~/.config/vim/plugged')
 Plug 'dense-analysis/ale'
