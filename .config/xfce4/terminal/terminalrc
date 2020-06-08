@@ -28,11 +28,12 @@ MiscSearchDialogOpacity=100
 MiscShowUnsafePasteDialog=FALSE
 TitleMode=TERMINAL_TITLE_REPLACE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
-FontName=Noto Sans Mono Medium 8
+FontName=Noto Sans Mono Medium 9
 ShortcutsNoMnemonics=TRUE
 ShortcutsNoHelpkey=TRUE
 ScrollingOnOutput=FALSE
 ScrollingUnlimited=TRUE
 BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
-BackgroundDarkness=0,900000
+BackgroundDarkness=1,000000
+ColorBackground=#202020202020
 
