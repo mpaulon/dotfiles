@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ $(grep $1 /proc/net/dev) ]]
+then
+  ipv6=$(ip a show wg0 | awk '/inet6 / {print $2}' | cut -d '/' -f1)
+  ipv4=$(ip a show wg0 | awk '/inet / {print $2}' | cut -d '/' -f1)
+  echo "$1 $ipv4 $ipv6"
+else
+  echo "$1: down"
+fi
+
