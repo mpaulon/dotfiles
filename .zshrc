@@ -52,7 +52,7 @@ zstyle ':vcs_info:git:*' formats '%b'
 autoload -Uz promptinit
 promptinit
 
-HCOLOR=$((($(hostname | md5sum | sed "s/[a-f]//g" | head -c 3) - 38) % 210 + 19))
+HCOLOR=$((($(hostname | md5sum | sed "s/[a-f]//g" | head -c 3) + 172) % 210 + 19))
 
 PROMPT='%B%(?.%F{green}√.%F{red}%?)%f%b%@ %F{$HCOLOR}%m%f %B(%2~)%b %# '
 RPROMPT='$vcs_info_msg_0_'
