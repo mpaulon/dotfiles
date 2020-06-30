@@ -1,0 +1,15 @@
+#TabsToolbar, .tabbrowser-tab {
+	max-height: 25px !important;
+  	margin-left: 0 !important;
+  	margin-right: 0 !important;}
+
+toolbarbutton, toolbarspring, #page-action-buttons, #tracking-protection-icon-container {
+    display:none !important;
+    max-height: 0 !important;
+    max-width: 0 !important;
+}
+
+/* Change tab max width */
+.tabbrowser-tab[fadein]:not([pinned]) {
+    max-width: 100% !important;
+}
