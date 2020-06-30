@@ -1,3 +1,5 @@
+/* to enable userChrome.css, toolkit.legacyUserProfileCustomizations.stylesheets in about:config */
+
 #TabsToolbar, .tabbrowser-tab {
 	max-height: 25px !important;
   	margin-left: 0 !important;
