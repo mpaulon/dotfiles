@@ -17,3 +17,11 @@ image[consumeanchor="PanelUI-button"], #back-button, #forward-button, #page-acti
 .tabbrowser-tab[fadein]:not([pinned]) {
     max-width: 100% !important;
 }
+
+:root {
+  --toolbar-bgcolor: #222 !important;
+  --lwt-accent-color: #222 !important;
+}
+#tabbrowser-tabs {
+  --tab-line-color: #ffffff !important;
+}
