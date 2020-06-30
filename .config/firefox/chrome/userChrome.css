@@ -3,10 +3,14 @@
   	margin-left: 0 !important;
   	margin-right: 0 !important;}
 
-toolbarbutton, toolbarspring, #page-action-buttons, #tracking-protection-icon-container {
+image[consumeanchor="PanelUI-button"], #back-button, #forward-button, #page-action-buttons, #tracking-protection-icon-container {
     display:none !important;
     max-height: 0 !important;
-    max-width: 0 !important;
+    max-width: 0px !important;
+}
+.toolbarbutton-badge-stack, #PanelUI-menu-button {
+  padding: 0 !important;
+  max-width: 0 !important;
 }
 
 /* Change tab max width */
