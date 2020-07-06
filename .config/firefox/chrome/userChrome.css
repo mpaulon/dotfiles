@@ -20,6 +20,10 @@ image[consumeanchor="PanelUI-button"], #back-button, #forward-button, #page-acti
     max-width: 100% !important;
 }
 
+.tabbrowser-tab[pinned] {
+  position: relative !important;
+}
+
 :root {
   --toolbar-bgcolor: #222 !important;
   --lwt-accent-color: #222 !important;
