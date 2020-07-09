@@ -70,9 +70,10 @@ inherit = bar/global
 bottom = false
 
 tray-position = left
-tray-detached = true
+tray-detached = false
 tray-padding = 2
 
+modules-left = spotify
 modules-center = xwindow
 modules-right = battery date
 
@@ -182,6 +183,11 @@ label-disconnected-foreground = ${colors.foreground-alt}
 [module/wireguard]
 type = custom/script
 exec = ~/.config/polybar/scripts/wireguard wg0
+
+[module/spotify]
+type = custom/script
+interval = 1
+exec = ~/.config/polybar/scripts/spotify -p '▶ ,⏸ ' -f '{play_pause} {song} - {artist} - {album}'
 
 [module/date]
 type = internal/date
