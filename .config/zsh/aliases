@@ -7,5 +7,9 @@ alias apt6="apt -o Acquire::ForceIPv6=true"
 alias gsudo='sudo git -c "include.path=/home/mikachu/.config/git/config" -c "include.path=/home/mikachu/.gitconfig"'
 alias g="git"
 alias env="source env/bin/activate"
-
+alias lemp="mkdir -p ~/git/lemp/sshfs && sshfs lemp4:git ~/git/lemp/sshfs"
+alias hrothgar="mkdir -p ~/git/sshfs/hrothgar && sshfs hrothgar:. ~/git/sshfs/hrothgar"
+alias gpg-upload="gpg --export FD6D9F6052B4AF5BFFDEBEB38BC97BC8087051A2 > /tmp/key.gpg && scp /tmp/key.gpg hrothgar:www/."
+alias qr="qrencode -o /tmp/qrencode.png && sxiv /tmp/qrencode.png && rm /tmp/qrencode.png"
+alias rm="rm -rvi"
 # vim: set filetype=zsh :
