@@ -30,4 +30,5 @@ image[consumeanchor="PanelUI-button"], #back-button, #forward-button, #page-acti
 }
 #tabbrowser-tabs {
   --tab-line-color: #ffffff !important;
+  padding-inline-start: 0 !important;
 }
