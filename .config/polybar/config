@@ -187,7 +187,7 @@ exec = ~/.config/polybar/scripts/wireguard wg0
 [module/spotify]
 type = custom/script
 interval = 1
-exec = ~/.config/polybar/scripts/spotify -p '▶ ,⏸ ' -f '{play_pause} {song} - {artist} - {album}'
+exec = ~/.config/polybar/scripts/spotify
 
 [module/date]
 type = internal/date
