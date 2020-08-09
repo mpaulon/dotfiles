@@ -1,1 +1,3 @@
 set linenumbers
+
+include ~/.config/nano/python.nanorc
