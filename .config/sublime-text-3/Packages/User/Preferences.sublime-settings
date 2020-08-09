@@ -2,7 +2,10 @@
     "color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
     "font_size": 9,
     "translate_tabs_to_spaces": true,
-    
+    "trim_trailing_white_space_on_save": true,
+    "save_on_focus_lost": true,
+    "auto_complete_commit_on_tab": true,
+    "hot_exit": false,
     "ignored_packages":
     [
         "Vintage"
