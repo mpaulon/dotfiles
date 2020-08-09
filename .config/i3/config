@@ -41,8 +41,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
-bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/'
-bindsym --release Shift+Print exec scrot -s '%Y-%m-%d-%s_screenshot_µwx%h.png' -e 'mv $f ~/'
+exec mkdir -p ~/Pictures/screenshots
+bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/screenshots'
+bindsym --release Shift+Print exec scrot -s '%Y-%m-%d-%s_screenshot_µwx%h.png' -e 'mv $f ~/Pictures/screenshots'
 bindsym $mod+l exec loginctl lock-session
 
 # Use Mouse+$mod to drag floating windows to their wanted position
