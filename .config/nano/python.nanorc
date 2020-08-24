@@ -8,7 +8,7 @@ comment "#"
 linter pyflakes
 
 # Function usage.
-color brightblue "[0-91-Za-z]+\("
+color brightblue "[0-91-Za-z_]+\("
 
 # Reset parenthesis.
 color brightwhite "\("
@@ -17,7 +17,7 @@ color brightwhite "\("
 color brightyellow "class [0-9A-Za-z_]+"
 
 # Function definitions.
-color bright "def [0-9A-Za-z_]+"
+color brightblue "def [0-9A-Za-z_]+"
 
 # Keywords.
 color brightcyan "\<(and|as|assert|async|await|break|class|continue)\>"
@@ -48,3 +48,4 @@ color brightwhite,yellow "(FIXME|TODO|XXX)"
 
 # Trailing whitespace.
 color ,green "[[:space:]]+$"
+color ,red " "
