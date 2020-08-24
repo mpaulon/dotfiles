@@ -4,7 +4,7 @@ typeset -U PATH
 # env
 export BROWSER=qutebrowser
 export EDITOR=vim
-
+export COLORFGBG=";0" #pour dire à ip -c que le background est sombre
 mkdir -p $HOME/.cache/zsh
 
 # completion
