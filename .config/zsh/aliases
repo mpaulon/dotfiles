@@ -1,5 +1,5 @@
 alias ls="ls --color=auto"
-alias ll="ls -alh"
+alias ll="ls -alh --time-style=long-iso"
 alias ip="ip -c"
 alias grep="grep --color=auto"
 alias apt4="apt -o Acquire::ForceIPv4=true"
